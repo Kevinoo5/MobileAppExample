@@ -16,7 +16,7 @@ const Input = ({ label, placeholder, isPassword }) => {
             <TextInput secureTextEntry={isPassword && !isPasswordVisible} placeholder={placeholder} style={styles.input} />
             { isPassword ? (
             <Pressable onPress={onEyePress}>
-                <Image source={require("../../assets/eye.png")} />
+                <Image style={styles.eye} source={isPasswordVisible ? require("../../assets/eye.png") : require("../../assets/eye_closed.png")} />
             </Pressable> ) : null }
             </View>
         </View>
