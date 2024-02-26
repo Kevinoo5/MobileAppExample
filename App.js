@@ -21,6 +21,16 @@ const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
+const ProductDetails = () => {
+  return (
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text>ProductDetails</Text>
+      </View>
+    </SafeAreaView>
+  );
+}
+
 const Tabs = () => {
   return (
     <Tab.Navigator screenOptions={({route}) => ({
@@ -75,6 +85,7 @@ const App = () => {
         {isSignedIn ? (
           <>
           <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}}/>
+          <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
           </>
         ) : (
           <>
