@@ -8,6 +8,7 @@ import SignIn from "./src/screens/auth/SignIn";
 import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
 import Home from "./src/screens/app/Home";
+import ProductDetails from "./src/screens/ProductDetails";
 
 import Config from "react-native-config";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
@@ -20,16 +21,6 @@ import { colors } from "./src/utils/colors";
 const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
-
-const ProductDetails = () => {
-  return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text>ProductDetails</Text>
-      </View>
-    </SafeAreaView>
-  );
-}
 
 const Tabs = () => {
   return (
