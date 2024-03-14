@@ -6,9 +6,11 @@ import { categories } from "../../../data/categories"
 import Header from "../../../components/Header";
 import CategoryBox from "../../../components/CategoryBox";
 import { products } from "../../../data/products";
+import { useNavigation } from "@react-navigation/native";
 import ProductHomeItem from "../../../components/ProductHomeItem";
 
 const Home = () => {
+    const navigation = useNavigation()
     const [selectedCategory, setSelectedCategory] = useState()
     const [keyword, setKeyword] = useState()
     const [selectedProducts, setSelectedProducts] = useState(products)
@@ -34,15 +36,19 @@ const Home = () => {
     }, [selectedCategory, keyword])
 
     const renderCategoryItem = ({item, index}) => {
-        console.log("item => ", item)
         return (
             <CategoryBox onPress={() => setSelectedCategory(item?.id)} isSelected={item.id === selectedCategory} title={item?.title} image={item?.image} />
         )
     }
 
     const renderProductItem = ({item}) => {
+
+        const onProductPress = (product) => {
+            navigation.navigate("ProductDetails", {product})
+        }
+
         return (
-            <ProductHomeItem {...item} />
+            <ProductHomeItem onPress={() => onProductPress(item)} {...item} />
         )
     }
 

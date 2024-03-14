@@ -8,6 +8,7 @@ import SignIn from "./src/screens/auth/SignIn";
 import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
 import Home from "./src/screens/app/Home";
+import ProductDetails from "./src/screens/ProductDetails";
 
 import Config from "react-native-config";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
@@ -75,6 +76,7 @@ const App = () => {
         {isSignedIn ? (
           <>
           <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}}/>
+          <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
           </>
         ) : (
           <>
