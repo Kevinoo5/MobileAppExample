@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
                 padding:24,
                 flex:1
         },
-        item:{
+        item: {
             paddingVertical: 8,
             paddingHorizontal: 16,
             marginVertical: 8,
@@ -15,18 +15,18 @@ export const styles = StyleSheet.create({
         sectionTitle: {
             fontWeight: '500',
             fontSize: 16,
-            color:colors.gray,
+            color:colors.grey,
             marginBottom: 16,
         },
-        SectionHeader:{
+        SectionHeader: {
             flexDirection: 'row',
             justifyContent: 'space-between'
         },
-        icon:{
+        icon: {
             width:24,
             height:24
         },
-        button:{
+        button: {
             paddingVertical: 12,
             marginTop:16
         }

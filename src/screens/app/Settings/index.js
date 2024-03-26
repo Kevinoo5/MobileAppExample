@@ -16,7 +16,6 @@ const Settings = () =>{
     }
 
     const onEditPress = () =>{
-        console.log(editing)
         setEditing(true)
     }
 
@@ -39,8 +38,9 @@ const Settings = () =>{
                 </View>
                 <EditableBox onChangeText={(v)=> onChange('name', v)} label="Name" value={values.name} editable={editing} />
                 <EditableBox onChangeText={(v)=> onChange('email', v)} label="Email" value={values.email} editable={editing} />
-                {editing ? (<Button style={styles.button} onPress={onSave} title="Save" />): null}
+                {editing ? (<Button style={[styles.button, {flex: 0}]} onPress={onSave} title="Save" />) : null}
 
+                <Text style={[styles.sectionTitle, {marginTop: 40}]}>Help Center</Text>
                 <ListItem onPress={onItemPress} style={styles.item} title="FAQ" />
                 <ListItem onPress={onItemPress} style={styles.item} title="Contact Us" />
                 <ListItem onPress={onItemPress} style={styles.item} title="Privacy & Terms" />

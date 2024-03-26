@@ -5,7 +5,7 @@ import {colors} from "../../../utils/colors"
 export const styles = StyleSheet.create({
         container: {
                 padding: 24,
-
+                flex: 1
         },
         name:{
                 fontSize: 20,
@@ -19,6 +19,6 @@ export const styles = StyleSheet.create({
                 marginBottom: 16
         },
         content:{
-
+                flex: 1
         }
 })
